@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Results</h1>
+    <p>Structural Similarity Index (SSIM): {{ score }}</p>
+
+    <h2>Original Image with Contours</h2>
+    <img src="{{ original }}" alt="Original Image with Contours">
+
+    <h2>Tampered Image with Contours</h2>
+    <img src="{{ tampered }}" alt="Tampered Image with Contours">
+
+    <h2>Difference Image</h2>
+    <img src="{{ diff }}" alt="Difference Image">
+
+    <h2>Threshold Image</h2>
+    <img src="{{ thresh }}" alt="Threshold Image">
+</body>
+</html>

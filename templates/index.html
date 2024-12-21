@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Upload Original and Tampered PAN Card Images</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="original">Original Image:</label>
+        <input type="file" id="original" name="original" required><br><br>
+        
+        <label for="tampered">Tampered Image:</label>
+        <input type="file" id="tampered" name="tampered" required><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
